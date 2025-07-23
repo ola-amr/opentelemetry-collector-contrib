@@ -21,7 +21,6 @@ const (
 	AttributeStateCached
 	AttributeStateInactive
 	AttributeStateFree
-	AttributeStateShared
 	AttributeStateSlabReclaimable
 	AttributeStateSlabUnreclaimable
 	AttributeStateUsed
@@ -38,8 +37,6 @@ func (av AttributeState) String() string {
 		return "inactive"
 	case AttributeStateFree:
 		return "free"
-	case AttributeStateShared:
-		return "shared"
 	case AttributeStateSlabReclaimable:
 		return "slab_reclaimable"
 	case AttributeStateSlabUnreclaimable:
@@ -56,7 +53,6 @@ var MapAttributeState = map[string]AttributeState{
 	"cached":             AttributeStateCached,
 	"inactive":           AttributeStateInactive,
 	"free":               AttributeStateFree,
-	"shared":             AttributeStateShared,
 	"slab_reclaimable":   AttributeStateSlabReclaimable,
 	"slab_unreclaimable": AttributeStateSlabUnreclaimable,
 	"used":               AttributeStateUsed,
